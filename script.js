@@ -1,6 +1,6 @@
 console.log("hello world")
 function vasilisa(){
-    console.log( "vasilisa")
+    console.log( "vasilisa");
 }
 vasilisa()
 function vidget(){
