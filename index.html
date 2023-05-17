@@ -18,12 +18,12 @@
       <script>
       new WOW().init();
       </script> 
-       <script src="script.js"></script>
+       
 </head>
 <body>
-    <div class="model">
+    <div class="model" id="model">
         <div class="model-content">
-            <span>&times;</span>
+            <button onclick="showModel()">&times;</button>
             <div>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                  At saepe quasi quae sit provident inventore sequi itaque temporibus 
@@ -35,24 +35,24 @@
         </div>
         
 </div>
-<button onclick="showModel()">model</button>
+<button onclick="showModel()" id="test">model</button>
     <header class="header">
-        <img src="/img/podarok.png" alt="" class="podarok animate__animated animate__wobble wow" width="70px">
+        <img src="img/podarok.png" alt="" class="podarok animate__animated animate__wobble wow" width="70px" id="pod">
         <div class="heading"> 
         <h1 class="heading-h1">футболки с принтами</h1>
         <h1 class="heading-rub">499 <sup>руб.</sup></h1>
         <h1 class="background-prace">почему так дёшево?</h1>
         <div class="sale-parent">
         <div class="sale">
-        <img src="/img/sale.png" alt="" class="picture">
+        <img src="img/sale.png" alt="" class="picture">
         <p class="prace">Низкие цены</p>
         </div>
         <div class="sale">
-         <img src="/img/gruzovik.png" alt="" class="picture">
+         <img src="img/gruzovik.png" alt="" class="picture">
          <p class="prace">Доставка по всей России</p>
             </div>
             <div class="sale">
-                <img src="/img/hit.png" alt="" class="picture">
+                <img src="img/hit.png" alt="" class="picture">
                 <p class="prace">Только хиты</p>
                 </div>  
             </div>
@@ -65,59 +65,61 @@
             <h2 class="t-shirts-h2"> Футболки </h2>
             <h3 class="t-shirts-h3">100% хлопок</h3>
             </div>
+
+
             <div class="two-shirts">
                 <div class="div-shirt">
+                    <div class="strelka">
+                        <img src="img/left.png" alt="" onclick="chargeTshirts('l')">
+                    </div>
                     <div class="div-shirt1">
-                    <img class="div-shirt-img" src="/img/depositphotos_74690493-stock-photo-blank-black-t-shirt.jpg" alt="" width="350px">
-                    <p class="description-shirt">Футболка</p>
+                        <img class="div-shirt-img" src="img/depositphotos_74690493-stock-photo-blank-black-t-shirt.jpg" alt="" id="imgL">
+                        <p class="description-shirt">Футболка</p>
                         <p class="price-shirt">499p</p>
                         <button class="div-shirt_button" onclick="alert('Вы добавили заказ')">добавить в заказ</button>
-                </div>
+                    </div>
                         
                     <div class="div-shirt1">
-                    <img class="div-shirt-img" src="/img/depositphotos_74690493-stock-photo-blank-black-t-shirt.jpg" alt="" width="350px">
-                   
-                   <p class="description-shirt"> Футболка </p>
-                   <p class="price-shirt">499p</p>
-                   <button class="div-shirt_button"onclick="alert('Вы добавили заказ')" >добавить в заказ</button>
-                   </div>
-                   <div class="vidget">
-                       <img src="/img/tp.png" alt="" width="70px" onclick="vidget()" class="animate__animated animate__rubberBand wow">
-
-                   </div>
-                   
-                    
-
-                    
-
+                        <img class="div-shirt-img" src="img/foot.jpg" alt="" id="imgR">
+                        <p class="description-shirt"> Футболка </p>
+                        <p class="price-shirt">499p</p>
+                        <button class="div-shirt_button"onclick="alert('Вы добавили заказ')" >добавить в заказ</button>
+                    </div>
+                  
+                   <div class="strelka">
+                        <img src="img/right.png" alt="" onclick="chargeTshirts('r')">
+                   </div>    
                 </div>
-
             </div>
             
 
         </section>
 
     </main>
+    <div class="vidget">
+        <img src="img/tp.png" alt="" width="70px" onclick="vidget()" class="animate__animated animate__rubberBand wow">
+
+    </div>
     <section class="size">
+
         <div class="size-h1">
             <h1>Как выбрать размер?</h1>
         </div>
         <div class="size-t-shirts">
             <div class="size-shirt">
             <img class="size-shirt-img" src="img/foot.jpg" alt="" width="350px" >
-            <h1>привет</h1>
             <p class="description-shirt">Футболка</p>
                 <p class="price-shirt">499p</p>
                 <button class="size-shirt_button" onclick="prompt('Как ваше имя')">добавить в заказ</button> 
                 </div> 
                 <div class="size-shirt">
-                <img class="size-shirt-img" src="/img/40184107da91bf1a73405163a45b2f0d.jpg" alt="" width="350px">
+                <img class="size-shirt-img" src="img/foot.jpg" alt="" width="350px">
                 <p class="description-shirt">Футболка</p>
                     <p class="price-shirt">499p</p>
                     <button class="size-shirt_button" onclick="alert('Вы добавили заказ')">добавить в заказ</button>    
                     </div>
                     <div class="size-shirt">
-                        <img class="size-shirt-img" src="/img/40184107da91bf1a73405163a45b2f0d.jpg" alt="" width="350px">
+                        <img class="size-shirt-img" src="img/foot.jpg" alt="" width="350px">
                         <p class="description-shirt">Футболка</p>
                             <p class="price-shirt">499p</p>
                             <button class="size-shirt_button" onclick="alert('Вы добавили заказ')">добавить в заказ</button>    
@@ -125,19 +127,19 @@
                     </div>
                     <div class="size-t-shirts"> 
                 <div class="size-shirt">
-            <img class="size-shirt-img" src="/img/40184107da91bf1a73405163a45b2f0d.jpg" alt="" width="350px">
+            <img class="size-shirt-img" src="img/foot.jpg" alt="" width="350px">
             <p class="description-shirt">Футболка</p>
                 <p class="price-shirt">499p</p>
                 <button class="size-shirt_button" onclick="prompt('Как ваше имя')">добавить в заказ</button> 
                 </div> 
                 <div class="size-shirt">
-                <img class="size-shirt-img" src="/img/40184107da91bf1a73405163a45b2f0d.jpg" alt="" width="350px">
+                <img class="size-shirt-img" src="img/foot.jpg" alt="" width="350px">
                 <p class="description-shirt">Футболка</p>
                     <p class="price-shirt">499p</p>
                     <button class="size-shirt_button" onclick="alert('Вы добавили заказ')">добавить в заказ</button>    
                     </div>
                     <div class="size-shirt">
-                        <img class="size-shirt-img" src="/img/40184107da91bf1a73405163a45b2f0d.jpg" alt="" width="350px">
+                        <img class="size-shirt-img" src="img/foot.jpg" alt="" width="350px">
                         <p class="description-shirt">Футболка</p>
                             <p class="price-shirt">499p</p>
                             <button class="size-shirt_button" onclick="alert('Вы добавили заказ')">добавить в заказ</button>    
@@ -157,7 +159,7 @@
 
             </div>
             <div class="wrapper-img">
-                <img src="/img/1639748624_84-catherineasquithgallery-com-p-rozovii-fon-s-dengami-190.jpg" alt="" width="150px">
+                <img src="img/1639748624_84-catherineasquithgallery-com-p-rozovii-fon-s-dengami-190.jpg" alt="" width="150px">
 
             </div>
 
@@ -190,7 +192,7 @@
             <h1 class="form-h1">Оформление заказа</h1>
             <label for="" class="label">Имя</label>
             <br>
-            <input type="text" placeholder="Имя" required class="input">
+            <input type="text" value ="Имя" required class="input" id="name">
             <br>
             <label for="" class="label">Фамилия</label>
             <br>
@@ -202,14 +204,24 @@
             <br>
             <label for="" class="label" >Телефон</label>
             <br>
-            <input type="tel" placeholder="Номер телефона" required class="input">
+            <input type="tel" placeholder="Номер телефона" required class="input" id="phone" onkeyup="CheckInput()">
             <h2 class="green"> Оплата онлайн</h2>
             <hr>
-            <button class="button">перейти к заказу</button>
+            <button onclick="checkName()" class="button" type="button">перейти к заказу</button>
             
         </form>
     
     </section>
+    <div class="feedback">
+        <div class="stars">
+            <img src="img/star1.png" alt="" onmouseover ="fillStars(1)" class="star">
+            <img src="img/star1.png" alt="" onmouseover ="fillStars(2)" class="star">
+            <img src="img/star1.png" alt="" onmouseover ="fillStars(3)" class="star">
+            <img src="img/star1.png" alt="" onmouseover ="fillStars(4)" class="star">
+            <img src="img/star1.png" alt="" onmouseover ="fillStars(5)" class="star">
+        </div>
+        <h3>Оставте оценку сайту</h3>
+    </div>
 
    
     <script src="script.js"></script>

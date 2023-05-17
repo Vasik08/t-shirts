@@ -83,6 +83,8 @@
 .div-shirt-img {
     border: 2px solid red;
     padding: 20px;
+    width: 350px;
+    height: 400px;
 }
 .size-h1 {
     background-color: rgb(155, 154, 154);
@@ -232,6 +234,7 @@ hr {
     position: fixed;
     top: 100px;
     left: 50px;
+    display: none;
 }
 .model {
     display: none;
@@ -242,11 +245,44 @@ hr {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    
 }
 .model-content {
     background-color: antiquewhite;
-    margin-top: 40%;
+    margin-top: 20%;
     margin-left: 20%;
     width: 70%;
+    animation-name: poptop; 
+    animation-duration: 0.4s;
 
+}
+@keyframes poptop{
+    from{
+        margin-top: -5%;
+        opacity: 0;
+    }
+    to{
+        margin-top: 20%;
+        opacity: 1;
+    }
+}
+.model-content button:hover {
+    background-color: red;
+}
+.feedback {
+    margin-top: 10%;
+}
+.star {
+    height: 50px;
+    width: 50px;
+}
+.stars {
+    text-align: center;
+}
+.strelka img {
+    width: 30px;
+    cursor: pointer;
+}
+.strelka {
+    margin-top: 180px;
 }
